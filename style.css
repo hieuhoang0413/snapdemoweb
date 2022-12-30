@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Infer-light;
+}
+
+@font-face {
+    font-family: 'Infer-light';
+    src: url(/font-family/static/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Infer-black';
+    src: url(/font-family/static/Inter-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Infer-bold';
+    src: url(/font-family/static/Inter-Bold.ttf);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.flex_web {
+    display: flex;
+}
+
+.tab_bar {
+    position: relative;
+}
+
+.logo {
+    padding: 30px;
+    padding-left: 50px;
+}
+
+.menu {
+    display: flex;
+    padding-top: 30px;
+    position: relative;
+}
+
+.features,
+.company,
+.menu p {
+    margin-left: 40px;
+    font-size: 16px;
+    font-family: Infer-light;
+    color: hsl(236, 13%, 42%);
+    cursor: pointer;
+    height: max-content;
+}
+
+.menu .features .down,
+.menu .company .down {
+    margin-left: 3px;
+    margin-right: 20px;
+    width: 10px;
+    position: absolute;
+    top: 10px;
+}
+
+.menu .company .up {
+    position: absolute;
+    left: 75px;
+    top: 10px;
+}
+
+.menu .features .up {
+    left: 70px;
+    position: absolute;
+    top: 10px;
+}
+
+.features,
+.company {
+    position: relative;
+}
+
+.features:hover,
+.company:hover {
+    color: black;
+}
+
+.contain_option {
+    margin-top: 15px;
+}
+
+.option {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px #333;
+}
+
+.features .option {
+    left: -45px;
+    height: 145px;
+    width: 130px;
+    display: none;
+}
+
+.features .option p {
+    margin: 0;
+    text-align: left;
+    margin-top: 13px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.features .option p:hover {
+    color: black;
+}
+
+.features .option img {
+    position: relative;
+    margin: 0;
+    top: 0;
+    width: 13px;
+    margin-right: 5px;
+}
+
+.features:hover .option {
+    display: block;
+}
+
+.features:hover .up,
+.company:hover .up {
+    display: block;
+}
+
+.features:hover .down,
+.company:hover .down {
+    display: none;
+}
+
+.features .up,
+.company .up {
+    display: none;
+}
+
+.company .option {
+    left: -15px;
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.company .option p {
+    margin: 0;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.company:hover .option {
+    display: block;
+}
+
+.log-in_register {
+    position: absolute;
+    right: 0;  
+    padding: 20px;
+    margin-right: 20px;
+    font-family: Infer-light;
+}
+
+.log-in_register .log-in {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+    color: hsl(236, 13%, 42%);
+    cursor: pointer;
+}
+
+.log-in_register .register {
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    line-height: 36px;
+    border: 2px solid hsl(236, 13%, 42%);
+    border-radius: 15px;
+    color: hsl(236, 13%, 42%);
+    cursor: pointer;
+}
+
+.log-in_register .log-in:hover,
+.log-in_register .register:hover {
+    color: black;
+}
+
+.info {
+    display: flex;
+    padding: 0px 120px 0 170px;
+    justify-content: space-between;
+}
+
+.content {
+    width: 50%;
+    margin-top: 100px;
+}
+
+.content .main_content h1 {
+    font-size: 80px;
+    font-family: Infer-light;
+    padding-right: 140px;
+}
+
+.content .main_content p {
+    font-size: 25px;
+    padding-right: 100px;
+    margin: 30px 0 30px 0;
+    color: hsl(236, 13%, 42%);
+}
+
+.content .main_content .learn_more {
+    height: 55px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 19px;
+    font-family: Infer-bold;
+}
+
+.content .main_content .learn_more:hover {
+    background-color: white;
+    color: black;
+}
+
+.content .info_footer {
+    margin-top: 45px;
+}
+
+.content .info_footer img {
+    margin-right: 40px;
+}
+
+.main_img {
+    width: 35%;
+}
+
+.main_img img {
+    width: 100%;
+}
+
+.attribution {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.container_modal_mobile {
+    display: none;
+}
+
+.modal_mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1375px) {
+    .modal_mobile {
+        justify-content: space-between;
+        display: block;
+    }
+    .logo {
+        padding: 25px 0 0 20px;
+    }
+
+    .menu_btn {
+        padding: 5;
+        width: 45px;
+        cursor: pointer;
+        float: right;
+        top: 25px;
+        position: absolute;
+        right: 0;
+    }
+
+    .info {
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    .main_img {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .main_img img {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+    .content .main_content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .main_content h1 {
+        text-align: center;
+        font-size: 50px;
+        padding: 0;
+    }
+
+    .content .main_content p {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content .main_content .learn_more {
+        width: 200px;
+    }
+
+    .content .info_footer {
+        display: flex;
+        margin-bottom: 100px;
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .content .info_footer img {
+        width: calc(100% / 5);
+        padding-left: 20px;
+        margin-right: 20px;
+    }
+
+    .open {
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+    }
+
+    .cancel_btn {
+        float: right;
+        padding: 10px;
+        width: 55px;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .modal_menu_mobile {
+        height: 100%;
+        width: 70%;
+        background-color: aliceblue;
+        float: right;
+        position: relative;
+    }
+
+    .modal_menu_mobile .menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .modal_menu_mobile .menu .features_mobile,
+    .modal_menu_mobile .menu .company_mobile {
+        font-size: 19px;
+        padding-bottom: 5px;
+    }
+
+    .modal_menu_mobile .menu p {
+        font-size: 19px;
+        padding-bottom: 20px;
+    }
+
+    .modal_menu_mobile .log-in_register {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .modal_menu_mobile .log-in_register .log-in,
+    .modal_menu_mobile .log-in_register .register {
+        width: 100%;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .features_mobile,
+    .company_mobile {
+        position: relative;
+        margin-left: 40px;
+        font-size: 19px;
+        font-family: Infer-light;
+        color: hsl(236, 13%, 42%);
+        cursor: pointer;
+        height: max-content;
+        margin-bottom: 20px;
+    }
+
+    .contain_option_mobile .option_mobile {
+        position: relative;
+        width: 100%;
+        height: max-content;
+        margin-left: 30px;
+    }
+
+    .contain_option_mobile .option_mobile img {
+        position: relative;
+        top: 3px;
+        width: 16px;
+        margin-right: 10px;
+    }
+
+    .contain_option_mobile {
+        display: none;
+    }
+
+    .open_option {
+        display: block !important;
+    }
+
+    .close_option {
+        display: none !important;
+    }
+
+    .down {
+        position: absolute !important;
+        margin-left: 15px !important;
+        width: 14px !important;
+        top: 9px !important;
+    }
+
+    .features_mobile .up {
+        display: none;
+        position: absolute !important;
+        margin-left: 95px;
+        top: 9px;
+        width: 13px;
+    }
+
+    .company_mobile .up {
+        display: none;
+        position: absolute !important;
+        margin-left: 102px;
+        top: 9px;
+        width: 13px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
